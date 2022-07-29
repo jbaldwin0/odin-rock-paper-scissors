@@ -20,8 +20,6 @@ function playRound(playerSelection, computerSelection) {
     Computer: ${computerSelection}`;
     playerSelection = playerSelection.toUpperCase();
     computerSelection = computerSelection.toUpperCase();
-    console.log(`Player: ${playerSelection}`);
-    console.log(`Computer: ${computerSelection}`);
     if (playerSelection == 'ROCK' && computerSelection == 'PAPER') {
         return 'lose';
     } else if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
@@ -44,18 +42,10 @@ function game(playerChoice) {
     if (result == 'win') {
         pScore++;
         round++;
-        console.log('You have won the round');
     } else if (result == 'lose') {
         cScore++;
         round++;
-        console.log('You have lost the round');
-    } else if (result == 'tie') {
-        console.log('The round was a tie');
-        round++;
-    } else {
-        console.log('Invalid input, please try again.');
     }
-    console.log(`Player: ${pScore} Computer: ${cScore}`);
         
     if (round === 5 || pScore === 3 || cScore === 3) {
         if (pScore > cScore) {
