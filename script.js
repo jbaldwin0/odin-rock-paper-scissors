@@ -1,3 +1,7 @@
+let pScore = 0;
+let cScore = 0;
+let round = 0;
+
 
 function getComputerChoice() {
     compChoice = parseInt(Math.floor(Math.random()*(3-1+1)+1));
@@ -12,6 +16,8 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
+    choice.textContent = `Player: ${playerSelection} 
+    Computer: ${computerSelection}`;
     playerSelection = playerSelection.toUpperCase();
     computerSelection = computerSelection.toUpperCase();
     console.log(`Player: ${playerSelection}`);
@@ -33,40 +39,55 @@ function playRound(playerSelection, computerSelection) {
     } 
 }
 
-function game() {
-    let round = 0;
-    let pScore = 0;
-    let cScore = 0;
-    while (round < 5) {
-        let playerChoice = prompt('Rock, paper, or scissors?')
-        let result = playRound(playerChoice, getComputerChoice());
-        if (result == 'win') {
-            pScore++;
-            round++;
-            console.log('You have won the round');
-        } else if (result == 'lose') {
-            cScore++;
-            round++;
-            console.log('You have lost the round');
-        } else if (result == 'tie') {
-            console.log('The round was a tie');
-            round++;
-        } else {
-            console.log('Invalid input, please try again.');
-        }
-        console.log(`Player: ${pScore} Computer: ${cScore}`);
-        
-        if (pScore == 3 || cScore == 3) {
-            break;
-        }
-    }
-    if (pScore > cScore) {
-        return `You have won with a score of ${pScore}`
-    } else if (pScore < cScore) {
-        return `The computer won with a score of ${cScore}`
+function game(playerChoice) {
+    let result = playRound(playerChoice, getComputerChoice());
+    if (result == 'win') {
+        pScore++;
+        round++;
+        console.log('You have won the round');
+    } else if (result == 'lose') {
+        cScore++;
+        round++;
+        console.log('You have lost the round');
+    } else if (result == 'tie') {
+        console.log('The round was a tie');
+        round++;
     } else {
-        return 'The game has ended with a tie.'
+        console.log('Invalid input, please try again.');
+    }
+    console.log(`Player: ${pScore} Computer: ${cScore}`);
+        
+    if (round === 5 || pScore === 3 || cScore === 3) {
+        if (pScore > cScore) {
+            return `Result: You have won the game.`;
+        } else if (pScore < cScore) {
+            return `Result: The computer has won the game.`;
+        } else {
+            return `Result: The game has ended with a tie.`;
+        }
     }
 }
 
-console.log(game());
+const btn = document.querySelector("#btn");
+window.addEventListener("click", event => {
+    if (round === 5 || pScore === 3 || cScore === 3) {
+        result.textContent = game(event.target.textContent);
+        score.textContent = `Player score: ${pScore}\r\n
+        Computer score: ${cScore}\r\n`;
+        curRound.textContent = `Round: ${round}`;
+        round = 0;
+        pScore = 0;
+        cScore = 0;
+    }
+    if (event.target.nodeName == "BUTTON") {
+        result.textContent = game(event.target.textContent);
+        score.textContent = `Player score: ${pScore}
+        Computer score: ${cScore}\r\n`;
+        curRound.textContent = `Round: ${round}`;
+    }
+});
+
+const choice = document.querySelector("#choice");
+const score = document.querySelector("#score");
+const curRound = document.querySelector("#round");
+const result = document.querySelector("#result");
