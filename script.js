@@ -45,6 +45,8 @@ function game(playerChoice) {
     } else if (result == 'lose') {
         cScore++;
         round++;
+    } else {
+        round++;
     }
         
     if (round === 5 || pScore === 3 || cScore === 3) {
@@ -76,6 +78,8 @@ window.addEventListener("click", event => {
         curRound.textContent = `Round: ${round}`;
     }
 });
+
+
 
 const choice = document.querySelector("#choice");
 const score = document.querySelector("#score");
