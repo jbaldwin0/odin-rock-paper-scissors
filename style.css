@@ -1,0 +1,41 @@
+:root {
+    --dark-grey: #18191a;
+    --overlay-grey: #242526;
+    --hover-grey: #3a3b3c;
+    --primary-text: #e4e6eb;
+    --secondary-text: #b0b3b8;
+    --left-width: 50vw;
+    --left-indent: 2vw;
+    --input-space: 8px;
+    --title-text: 1.6rem;
+ }
+
+ body {
+    background-color: var(--dark-grey);
+    color: var(--primary-text);
+ }
+
+.main-container {
+    width: 300px;
+    height: 300px;
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+    background-color: var(--overlay-grey);
+    border-radius: 4px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    column-gap: 1em;
+}
+
+#btn {
+
+}
