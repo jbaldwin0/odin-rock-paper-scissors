@@ -60,28 +60,32 @@ function game(playerChoice) {
     }
 }
 
-const btn = document.querySelector("#btn");
-window.addEventListener("click", event => {
-    if (round === 5 || pScore === 3 || cScore === 3) {
-        result.textContent = game(event.target.textContent);
-        score.textContent = `Player score: ${pScore}\r\n
-        Computer score: ${cScore}\r\n`;
-        curRound.textContent = `Round: ${round}`;
-        round = 0;
-        pScore = 0;
-        cScore = 0;
-    }
-    if (event.target.nodeName == "BUTTON") {
-        result.textContent = game(event.target.textContent);
-        score.textContent = `Player score: ${pScore}
-        Computer score: ${cScore}\r\n`;
-        curRound.textContent = `Round: ${round}`;
-    }
-});
-
-
-
 const choice = document.querySelector("#choice");
 const score = document.querySelector("#score");
 const curRound = document.querySelector("#round");
 const result = document.querySelector("#result");
+
+const btn = document.querySelectorAll(".btn");
+
+btn.forEach(element => {  
+
+    element.addEventListener("click", event => {
+        if (round === 5 || pScore === 3 || cScore === 3) {
+            result.textContent = game(event.target.textContent);
+            score.textContent = `Player score: ${pScore}\r\n
+            Computer score: ${cScore}\r\n`;
+            curRound.textContent = `Round: ${round}`;
+            round = 0;
+            pScore = 0;
+            cScore = 0;
+        }
+        if (event.target.nodeName == "BUTTON") {
+            result.textContent = game(event.target.textContent);
+            score.textContent = `Player score: ${pScore}
+            Computer score: ${cScore}\r\n`;
+            curRound.textContent = `Round: ${round}`;
+        }
+    });
+    
+});
+
