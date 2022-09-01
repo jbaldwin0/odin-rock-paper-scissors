@@ -16,8 +16,9 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    choice.textContent = `Player: ${playerSelection} 
-    Computer: ${computerSelection}`;
+    choice.textContent = `Player: ${playerSelection}`;
+    computerChoice.textContent = `Computer: ${computerSelection}`;
+
     playerSelection = playerSelection.toUpperCase();
     computerSelection = computerSelection.toUpperCase();
     if (playerSelection == 'ROCK' && computerSelection == 'PAPER') {
@@ -61,6 +62,7 @@ function game(playerChoice) {
 }
 
 const choice = document.querySelector("#choice");
+const computerChoice = document.querySelector("#computer");
 const score = document.querySelector("#score");
 const curRound = document.querySelector("#round");
 const result = document.querySelector("#result");
@@ -86,6 +88,6 @@ btn.forEach(element => {
             curRound.textContent = `Round: ${round}`;
         }
     });
-    
+
 });
 
