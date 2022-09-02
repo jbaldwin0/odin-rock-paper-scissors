@@ -36,6 +36,14 @@
     column-gap: 1em;
 }
 
+.choice-box {
+    display: flex;
+}
+
+.choice {
+    flex: content;
+}
+
 .btn {
 
 }
