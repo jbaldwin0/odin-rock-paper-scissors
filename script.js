@@ -70,10 +70,11 @@ function resetGame() {
 
     choice.textContent = `Player: ${playerSelection}`;
     computerChoice.textContent = `Computer: ${computerSelection}`;
-    curRound.textContent = "";
+    curRound.textContent = "Round:";
     score.textContent = `Player score: ${pScore}
     Computer score: ${cScore}\r\n`;
-    result = "";
+    //result.textContent = game(event.target.textContent);
+    result.textContent = "";
 
 }
 
