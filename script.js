@@ -61,6 +61,22 @@ function game(playerChoice) {
     }
 }
 
+function resetGame() {
+    playerSelection = "Empty";
+    computerSelection = "Empty";
+    round = "";
+    pScore = 0;
+    cScore = 0;
+
+    choice.textContent = `Player: ${playerSelection}`;
+    computerChoice.textContent = `Computer: ${computerSelection}`;
+    curRound.textContent = "";
+    score.textContent = `Player score: ${pScore}
+    Computer score: ${cScore}\r\n`;
+    result = "";
+
+}
+
 const choice = document.querySelector("#choice");
 const computerChoice = document.querySelector("#computer");
 const score = document.querySelector("#score");
@@ -72,7 +88,7 @@ const btn = document.querySelectorAll(".btn");
 btn.forEach(element => {  
 
     element.addEventListener("click", event => {
-        if (round === 5 || pScore === 3 || cScore === 3) {
+        if (round === 5 || pScore === (cScore+3) || cScore === (pScore+3)) {
             result.textContent = game(event.target.textContent);
             score.textContent = `Player score: ${pScore}\r\n
             Computer score: ${cScore}\r\n`;
@@ -89,5 +105,11 @@ btn.forEach(element => {
         }
     });
 
+});
+
+const reset = document.querySelector("#reset");
+
+reset.addEventListener("click", event => {
+    resetGame();
 });
 
