@@ -59,6 +59,7 @@ function game(playerChoice) {
             return `Result: The game has ended with a tie.`;
         }
     }
+    return `Result:`
 }
 
 function resetGame() {
@@ -73,7 +74,7 @@ function resetGame() {
     curRound.textContent = "Round:";
     score.textContent = `Player score: ${pScore}
     Computer score: ${cScore}\r\n`;
-    result.textContent = "";
+    result.textContent = "Result:";
 
 }
 
