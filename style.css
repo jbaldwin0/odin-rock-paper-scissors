@@ -34,16 +34,24 @@
     display: flex;
     justify-content: center;
     column-gap: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .choice-box {
     display: flex;
+    
 }
 
 .choice {
     flex: content;
 }
 
-.btn {
+.round-info {
+    display: flex;
+    
+}
 
+#reset {
+    margin-right: 1em;
 }

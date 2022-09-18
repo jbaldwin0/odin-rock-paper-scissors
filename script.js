@@ -73,7 +73,6 @@ function resetGame() {
     curRound.textContent = "Round:";
     score.textContent = `Player score: ${pScore}
     Computer score: ${cScore}\r\n`;
-    //result.textContent = game(event.target.textContent);
     result.textContent = "";
 
 }
