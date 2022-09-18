@@ -27,7 +27,7 @@
     
     margin: auto;
     background-color: var(--overlay-grey);
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .controls {
@@ -53,5 +53,12 @@
 }
 
 #reset {
-    margin-right: 1em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
