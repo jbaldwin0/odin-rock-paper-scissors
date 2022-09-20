@@ -52,14 +52,14 @@ function game(playerChoice) {
         
     if (round === 5 || pScore === 3 || cScore === 3) {
         if (pScore > cScore) {
-            return `Result: You have won the game.`;
+            return `You win!`;
         } else if (pScore < cScore) {
-            return `Result: The computer has won the game.`;
+            return `You lose!`;
         } else {
-            return `Result: The game has ended with a tie.`;
+            return `Draw!`;
         }
     }
-    return `Result:`
+    return ``
 }
 
 function resetGame() {
