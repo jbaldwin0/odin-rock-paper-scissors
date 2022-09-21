@@ -41,6 +41,7 @@
 
 .choice-box {
     display: flex;
+    padding-bottom: 1em;
     
 }
 
@@ -53,6 +54,7 @@
     
 }
 
+
 #reset {
     margin: 0;
     position: absolute;
@@ -62,6 +64,10 @@
     left: 50%;
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+}
+
+#score {
+    padding-bottom: 1em;
 }
 
 #result {
