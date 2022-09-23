@@ -54,6 +54,12 @@
     
 }
 
+.score-info {
+    display: flex;
+    justify-content: center;
+    column-gap: 1em;
+}
+
 
 #reset {
     margin: 0;

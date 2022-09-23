@@ -80,7 +80,9 @@ function resetGame() {
 
 const choice = document.querySelector("#choice");
 const computerChoice = document.querySelector("#computer");
+
 const score = document.querySelector("#score");
+
 const curRound = document.querySelector("#round");
 const result = document.querySelector("#result");
 
