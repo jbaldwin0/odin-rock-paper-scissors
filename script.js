@@ -72,8 +72,10 @@ function resetGame() {
     choice.textContent = `Player: ${playerSelection}`;
     computerChoice.textContent = `Computer: ${computerSelection}`;
     curRound.textContent = "Round:";
-    score.textContent = `Player score: ${pScore}
-    Computer score: ${cScore}\r\n`;
+
+    playerScore.textContent = `Player score: ${pScore}`
+    computerScore.textContent = `Computer score: ${cScore}`
+
     result.textContent = "Result:";
 
 }
@@ -81,11 +83,11 @@ function resetGame() {
 const choice = document.querySelector("#choice");
 const computerChoice = document.querySelector("#computer");
 
-const score = document.querySelector("#score");
+const playerScore = document.querySelector("#player-score");
+const computerScore = document.querySelector("#comp-score");
 
 const curRound = document.querySelector("#round");
 const result = document.querySelector("#result");
-
 const btn = document.querySelectorAll(".btn");
 
 btn.forEach(element => {  
@@ -93,8 +95,10 @@ btn.forEach(element => {
     element.addEventListener("click", event => {
         if (round === 5 || pScore === (cScore+3) || cScore === (pScore+3)) {
             result.textContent = game(event.target.textContent);
-            score.textContent = `Player score: ${pScore}\r\n
-            Computer score: ${cScore}\r\n`;
+
+            playerScore.textContent = `Player score: ${pScore}`
+            computerScore.textContent = `Computer score: ${cScore}`
+
             curRound.textContent = `Round: ${round}`;
             round = 0;
             pScore = 0;
@@ -102,8 +106,10 @@ btn.forEach(element => {
         }
         if (event.target.nodeName == "BUTTON") {
             result.textContent = game(event.target.textContent);
-            score.textContent = `Player score: ${pScore}
-            Computer score: ${cScore}\r\n`;
+
+            playerScore.textContent = `Player score: ${pScore}`
+            computerScore.textContent = `Computer score: ${cScore}`
+
             curRound.textContent = `Round: ${round}`;
         }
     });
