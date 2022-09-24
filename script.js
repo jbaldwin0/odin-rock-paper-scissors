@@ -73,10 +73,10 @@ function resetGame() {
     computerChoice.textContent = `Computer: ${computerSelection}`;
     curRound.textContent = "Round:";
 
-    playerScore.textContent = `Player score: ${pScore}`
-    computerScore.textContent = `Computer score: ${cScore}`
+    playerScore.textContent = `${pScore}`
+    computerScore.textContent = `${cScore}`
 
-    result.textContent = "Result:";
+    result.textContent = "";
 
 }
 
@@ -96,8 +96,8 @@ btn.forEach(element => {
         if (round === 5 || pScore === (cScore+3) || cScore === (pScore+3)) {
             result.textContent = game(event.target.textContent);
 
-            playerScore.textContent = `Player score: ${pScore}`
-            computerScore.textContent = `Computer score: ${cScore}`
+            playerScore.textContent = `${pScore}`
+            computerScore.textContent = `${cScore}`
 
             curRound.textContent = `Round: ${round}`;
             round = 0;
@@ -107,8 +107,8 @@ btn.forEach(element => {
         if (event.target.nodeName == "BUTTON") {
             result.textContent = game(event.target.textContent);
 
-            playerScore.textContent = `Player score: ${pScore}`
-            computerScore.textContent = `Computer score: ${cScore}`
+            playerScore.textContent = `${pScore}`
+            computerScore.textContent = `${cScore}`
 
             curRound.textContent = `Round: ${round}`;
         }

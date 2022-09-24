@@ -42,11 +42,13 @@
 .choice-box {
     display: flex;
     padding-bottom: 1em;
+    justify-content: center;
+    column-gap: 1em;
     
 }
 
 .choice {
-    flex: content;
+
 }
 
 .round-info {
@@ -64,12 +66,16 @@
 #reset {
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 60%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 50%;
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+}
+
+#player-score {
+
 }
 
 #score {
@@ -81,7 +87,7 @@
 
     margin: 0;
     position: absolute;
-    top: 70%;
+    top: 75%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 50%;
