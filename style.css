@@ -47,9 +47,6 @@
     
 }
 
-.choice {
-
-}
 
 .round-info {
     display: flex;
@@ -66,7 +63,7 @@
 #reset {
     margin: 0;
     position: absolute;
-    top: 60%;
+    top: 65%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 50%;
@@ -74,9 +71,16 @@
     transform: translateX(-50%);
 }
 
-#player-score {
+.score {
+    border: #e4e6eb;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 8px;
+    padding: 0.3em;
 
+    text-align: center;
 }
+
 
 #score {
     padding-bottom: 1em;
@@ -87,7 +91,7 @@
 
     margin: 0;
     position: absolute;
-    top: 75%;
+    top: 80%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 50%;
