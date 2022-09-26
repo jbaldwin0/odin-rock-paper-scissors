@@ -63,7 +63,7 @@
 #reset {
     margin: 0;
     position: absolute;
-    top: 65%;
+    top: 68%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 50%;
@@ -77,10 +77,15 @@
     border-width: 4px;
     border-radius: 8px;
     padding: 0.3em;
+    width: 70px;
+    height: 70px;
 
     text-align: center;
 }
 
+#round {
+    padding-top: 0.5em;
+}
 
 #score {
     padding-bottom: 1em;
