@@ -1,6 +1,7 @@
 let pScore = 0;
 let cScore = 0;
 let round = 0;
+let actionText = "";
 
 
 function getComputerChoice() {
@@ -21,6 +22,7 @@ function playRound(playerSelection, computerSelection) {
 
     playerSelection = playerSelection.toUpperCase();
     computerSelection = computerSelection.toUpperCase();
+    console.log(actionText);
     if (playerSelection == 'ROCK' && computerSelection == 'PAPER') {
         return 'lose';
     } else if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
@@ -43,11 +45,14 @@ function game(playerChoice) {
     if (result == 'win') {
         pScore++;
         round++;
+        actionText = "beats";
     } else if (result == 'lose') {
         cScore++;
         round++;
+        actionText = "loses to";
     } else {
         round++;
+        actionText = "ties with";
     }
         
     if (round === 5 || pScore === 3 || cScore === 3) {
