@@ -47,7 +47,6 @@
     
 }
 
-
 .round-info {
     display: flex;
     
@@ -84,7 +83,7 @@
 }
 
 #round {
-    padding-top: 0.5em;
+    padding-top: 0.75em;
 }
 
 #score {
