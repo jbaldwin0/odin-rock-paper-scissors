@@ -2,7 +2,7 @@ let pScore = 0;
 let cScore = 0;
 let round = 0;
 let actionText = "";
-
+//testing
 
 function getComputerChoice() {
     compChoice = parseInt(Math.floor(Math.random()*(3-1+1)+1));
