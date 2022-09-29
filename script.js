@@ -17,8 +17,8 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    choice.textContent = `Player: ${playerSelection}`;
-    computerChoice.textContent = `Computer: ${computerSelection}`;
+    choice.textContent = `${playerSelection}`;
+    computerChoice.textContent = `${computerSelection}`;
 
     playerSelection = playerSelection.toUpperCase();
     computerSelection = computerSelection.toUpperCase();
@@ -46,13 +46,16 @@ function game(playerChoice) {
         pScore++;
         round++;
         actionText = "beats";
+        action.textContent = `${actionText}`;
     } else if (result == 'lose') {
         cScore++;
         round++;
         actionText = "loses to";
+        action.textContent = `${actionText}`;
     } else {
         round++;
         actionText = "ties with";
+        action.textContent = `${actionText}`;
     }
         
     if (round === 5 || pScore === 3 || cScore === 3) {
@@ -68,14 +71,15 @@ function game(playerChoice) {
 }
 
 function resetGame() {
-    playerSelection = "Empty";
-    computerSelection = "Empty";
+    playerSelection = "";
+    computerSelection = "";
     round = "";
     pScore = 0;
     cScore = 0;
 
-    choice.textContent = `Player: ${playerSelection}`;
-    computerChoice.textContent = `Computer: ${computerSelection}`;
+    choice.textContent = `${playerSelection}`;
+    computerChoice.textContent = `${computerSelection}`;
+    action.textContent = "Make your choice!"
     curRound.textContent = "Round:";
 
     playerScore.textContent = `${pScore}`
@@ -87,6 +91,7 @@ function resetGame() {
 
 const choice = document.querySelector("#choice");
 const computerChoice = document.querySelector("#computer");
+const action = document.querySelector("#action");
 
 const playerScore = document.querySelector("#player-score");
 const computerScore = document.querySelector("#comp-score");
