@@ -44,6 +44,7 @@
     background-color: var(--overlay-grey);
     border-style: solid;
     border-color: rgb(89, 60, 95);
+    border-width: 4px;
     border-radius: 8px;
 }
 
@@ -87,7 +88,7 @@
 }
 
 .score {
-    border: #e4e6eb;
+    border: rgb(89, 60, 95);
     border-style: solid;
     border-width: 4px;
     border-radius: 8px;
@@ -104,6 +105,11 @@
 
 #score {
     padding-bottom: 1em;
+}
+
+.score-number {
+    margin-top: 0.3em;
+    font-size: 2em;
 }
 
 #result {
