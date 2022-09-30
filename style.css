@@ -42,8 +42,6 @@
     
     margin: auto;
     background-color: var(--overlay-grey);
-    border-style: solid;
-    border-color: rgb(89, 60, 95);
     border-width: 4px;
     border-radius: 8px;
 }
