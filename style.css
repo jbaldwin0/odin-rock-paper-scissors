@@ -15,9 +15,23 @@
     color: var(--primary-text);
  }
 
+ button {
+    color: var(--primary-text);
+    background-color: rgb(89, 60, 95);
+    border: #e4e6eb;
+    border-radius: 4px;
+    height: 42px;
+    width: 180px;
+ }
+
+ button:active {
+    background-color: rgb(79, 50, 85);
+    box-shadow: inset;
+ }
+
 .main-container {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     padding: 1em;
     
     position: absolute;
@@ -28,6 +42,8 @@
     
     margin: auto;
     background-color: var(--overlay-grey);
+    border-style: solid;
+    border-color: rgb(89, 60, 95);
     border-radius: 8px;
 }
 
@@ -95,7 +111,7 @@
 
     margin: 0;
     position: absolute;
-    top: 80%;
+    top: 83%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 50%;
