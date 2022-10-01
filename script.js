@@ -22,7 +22,7 @@ function playRound(playerSelection, computerSelection) {
 
     playerSelection = playerSelection.toUpperCase();
     computerSelection = computerSelection.toUpperCase();
-    console.log(actionText);
+
     if (playerSelection == 'ROCK' && computerSelection == 'PAPER') {
         return 'lose';
     } else if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
