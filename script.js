@@ -2,7 +2,19 @@ let pScore = 0;
 let cScore = 0;
 let round = 0;
 let actionText = "";
-//testing
+
+const choice = document.querySelector("#choice");
+const computerChoice = document.querySelector("#computer");
+const action = document.querySelector("#action");
+
+const playerScore = document.querySelector("#player-score");
+const computerScore = document.querySelector("#comp-score");
+
+const curRound = document.querySelector("#round");
+const result = document.querySelector("#result");
+const btn = document.querySelectorAll(".btn");
+const reset = document.querySelector("#reset");
+
 
 function getComputerChoice() {
     compChoice = parseInt(Math.floor(Math.random()*(3-1+1)+1));
@@ -89,17 +101,6 @@ function resetGame() {
 
 }
 
-const choice = document.querySelector("#choice");
-const computerChoice = document.querySelector("#computer");
-const action = document.querySelector("#action");
-
-const playerScore = document.querySelector("#player-score");
-const computerScore = document.querySelector("#comp-score");
-
-const curRound = document.querySelector("#round");
-const result = document.querySelector("#result");
-const btn = document.querySelectorAll(".btn");
-
 btn.forEach(element => {  
 
     element.addEventListener("click", event => {
@@ -125,8 +126,6 @@ btn.forEach(element => {
     });
 
 });
-
-const reset = document.querySelector("#reset");
 
 reset.addEventListener("click", event => {
     resetGame();
